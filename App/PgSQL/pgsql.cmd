@@ -1,17 +1,14 @@
 @echo off
-set "PGSQL=C:\napp_auditoria\npostgres\App\PgSQL"
-set "PGDATA=C:\napp_auditoria\npostgres\Data\data"
-set "PGLOG=C:\napp_auditoria\npostgres\Data\log.txt"
-set "PGLOCALEDIR=C:\napp_auditoria\npostgres\App\PgSQL\share"
+%%
+set "PGSQL=%SYSTEMDRIVE%\napp_auditoria\npostgres\App\PgSQL"
+set "PGDATA=%SYSTEMDRIVE%\napp_auditoria\npostgres\Data\data"
+set "PGLOG=%SYSTEMDRIVE%\napp_auditoria\npostgres\Data\log.txt"
+set "PGLOCALEDIR=%SYSTEMDRIVE%\napp_auditoria\npostgres\App\PgSQL\share"
 set "PGDATABASE=postgres"
 set "PGPORT=10099"
 set "PGUSER=postgres"
-set "PATH=%PATH%;C:\napp_auditoria\npostgres\App\PgSQL\bin"
-set "PATH=%PATH%;C:\napp_auditoria\npostgres\App\Perl\bin"
-
-
-title PostgreSQL Portable
-cls
+set "PATH=%PATH%;%SYSTEMDRIVE%\napp_auditoria\npostgres\App\PgSQL\bin"
+set "PATH=%PATH%;%SYSTEMDRIVE%\napp_auditoria\npostgres\App\Perl\bin"
 
 :: set default code page
 chcp 1252 > nul
@@ -26,10 +23,8 @@ if not exist "%PGDATA%" (
 :: startup postgres server
 echo.
 "%PGSQL%\bin\pg_ctl" -D "%PGDATA%" -l "%PGLOG%" -w start
-cls
-echo.
-echo Running on port %PGPORT%. Type \q to quit and shutdown the server.
-echo.
-"%PGSQL%\bin\psql.exe" --port=%PGPORT% --dbname="%PGDATABASE%" --username="%PGUSER%"
+
+set /P "var="
+
 echo.
 "%PGSQL%\bin\pg_ctl" -D "%PGDATA%" stop
