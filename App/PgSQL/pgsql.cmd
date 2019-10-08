@@ -1,4 +1,15 @@
 @echo off
+set "PGSQL=C:\napp_auditoria\npostgres\App\PgSQL"
+set "PGDATA=C:\napp_auditoria\npostgres\Data\data"
+set "PGLOG=C:\napp_auditoria\npostgres\Data\log.txt"
+set "PGLOCALEDIR=C:\napp_auditoria\npostgres\App\PgSQL\share"
+set "PGDATABASE=postgres"
+set "PGPORT=10099"
+set "PGUSER=postgres"
+set "PATH=%PATH%;C:\napp_auditoria\npostgres\App\PgSQL\bin"
+set "PATH=%PATH%;C:\napp_auditoria\npostgres\App\Perl\bin"
+
+
 title PostgreSQL Portable
 cls
 
