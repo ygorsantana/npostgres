@@ -1,5 +1,5 @@
 @echo off
-%%
+
 set "PGSQL=%SYSTEMDRIVE%\napp_auditoria\npostgres\App\PgSQL"
 set "PGDATA=%SYSTEMDRIVE%\napp_auditoria\npostgres\Data\data"
 set "PGLOG=%SYSTEMDRIVE%\napp_auditoria\npostgres\Data\log.txt"
