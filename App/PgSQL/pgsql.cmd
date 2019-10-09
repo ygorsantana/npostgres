@@ -1,14 +1,14 @@
 @echo off
 
-set "PGSQL=%SYSTEMDRIVE%\napp_auditoria\npostgres\App\PgSQL"
-set "PGDATA=%SYSTEMDRIVE%\napp_auditoria\npostgres\Data\data"
-set "PGLOG=%SYSTEMDRIVE%\napp_auditoria\npostgres\Data\log.txt"
-set "PGLOCALEDIR=%SYSTEMDRIVE%\napp_auditoria\npostgres\App\PgSQL\share"
+set "PGSQL=%SYSTEMDRIVE%\nappsync\npostgres\App\PgSQL"
+set "PGDATA=%SYSTEMDRIVE%\nappsync\npostgres\Data\data"
+set "PGLOG=%SYSTEMDRIVE%\nappsync\npostgres\Data\log.txt"
+set "PGLOCALEDIR=%SYSTEMDRIVE%\nappsync\npostgres\App\PgSQL\share"
 set "PGDATABASE=postgres"
 set "PGPORT=10099"
 set "PGUSER=postgres"
-set "PATH=%PATH%;%SYSTEMDRIVE%\napp_auditoria\npostgres\App\PgSQL\bin"
-set "PATH=%PATH%;%SYSTEMDRIVE%\napp_auditoria\npostgres\App\Perl\bin"
+set "PATH=%SYSTEMDRIVE%\nappsync\npostgres\App\PgSQL\bin;%PATH%"
+set "PATH=%SYSTEMDRIVE%\nappsync\npostgres\App\Perl\bin;%PATH%"
 
 :: set default code page
 chcp 1252 > nul
